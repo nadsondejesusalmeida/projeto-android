@@ -9,16 +9,8 @@
 }
 
 :root {
-	--zero-color: #C5EBD6;
-	--primary-color: #83E1AD;
-	--secondary-color: #3DDC84;
-	--tertiary-color: #2FA866;
-	--quaternary-color: #1A5C37;
-	--quinary-color: #063D1E;
-	
-	--default-font: Arial, Verdana, Helvetica, sans-serif;
-	--prominent-font: 'Bebas Neue', cursive;
-	--android-font: 'Android', cursive;
+	--android-secondary-font-family: 'Bebas Neue', cursive;
+	--android-primary-font-family: 'Android', cursive;
 }
 
 * {
@@ -27,7 +19,7 @@
 }
 
 body {
-	font-family: var(--default-font);
+	font-family: var(--primary-font-family);
 	background-color: #C5EBD6;
 }
 
@@ -37,8 +29,8 @@ body {
 	position: fixed;
 	right: 15px;
 	bottom: 15px;
-	background-color: var(--text);
-	color: var(--main-background);
+	background-color: var(--primary-text-color);
+	color: var(--secondary-background-color);
 	border: none;
 	border-radius: 50%;
 	z-index: 100;
@@ -53,12 +45,12 @@ header {
 	padding-top: 40px;
 	min-height: 150px;
 	text-align: center;
-	background-image: linear-gradient(to bottom, var(--tertiary-color), var(--quinary-color));
+	background-image: linear-gradient(to bottom, var(--android-quaternary-color), var(--android-scenario-color));
 }
 
 header > h1 {
 	margin-bottom: 20px;
-	font-family: var(--prominent-font);
+	font-family: var(--android-secondary-font-family);
 	font-size: 3em;
 	font-weight: normal;
 	text-shadow: 2px 2px 0 #00000050;
@@ -69,7 +61,7 @@ header > p {
 	margin: auto;
 	padding: 0 10px;
 	max-width: 600px;
-	font-family: var(--default-font);
+	font-family: var(--primary-font-family);
 	font-size: 1.2em;
 	text-shadow: 2px 2px 0 #00000050;
 	color: white;
@@ -77,7 +69,7 @@ header > p {
 
 nav {
 	padding: 10px;
-	background-color: var(--quinary-color);
+	background-color: var(--android-scenario-color);
 	box-shadow: 0 7px 7px #00000050;
 }
 
@@ -91,37 +83,37 @@ nav > a {
 }
 
 nav > a:hover {
-	background-color: var(--primary-color);
-	color: var(--quinary-color);
+	background-color: var(--android-secondary-color);
+	color: var(--android-scenario-color);
 }
 
 main {
 	margin: auto;
 	padding: 20px;
 	max-width: 800px;
-	background-color: var(--main-background);
-	color: var(--text);
+	background-color: var(--secondary-background-color);
+	color: var(--primary-text-color);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main h1 {
-	font-family: var(--android-font);
-	color: var(--quinary-color);
+	font-family: var(--android-primary-font-family);
+	color: var(--android-scenario-color);
 }
 
 [data-theme="dark"] main h1 {
-	color: var(--secondary-color);
+	color: var(--android-tertiary-color);
 }
 
 main h2 {
-	font-family: var(--android-font);
+	font-family: var(--android-primary-font-family);
 	font-size: 1.2rem;
 	font-weight: normal;
 	text-indent: 7px;
-	background-image: linear-gradient(to right, var(--primary-color), transparent);
-	color: var(--quinary-color);
+	background-image: linear-gradient(to right, var(--android-secondary-color), transparent);
+	color: var(--android-scenario-color);
 }
 
 main p {
@@ -133,18 +125,18 @@ main p {
 
 main strong {
 	font-weight: bold;
-	color: var(--quaternary-color);
+	color: var(--android-quinary-color);
 }
 
 [data-theme="dark"] main strong {
-	color: var(--secondary-color);
+	color: var(--android-tertiary-color);
 }
 
 main a {
 	font-weight: bold;
 	text-decoration: none;
-	background-color: var(--primary-color);
-	color: var(--quinary-color);
+	background-color: var(--android-secondary-color);
+	color: var(--android-scenario-color);
 }
 
 main a:hover {
@@ -167,7 +159,7 @@ main img.small {
 
 div.videos {
 	position: relative;
-	border: 1px solid var(--primary-color);
+	border: 1px solid var(--android-secondary-color);
 	border-radius: 5px;
 	overflow: hidden;
 }
@@ -187,24 +179,24 @@ div.videos > iframe {
 main aside {
 	margin-top: 15px;
 	padding: 10px;
-	background-color: var(--secondary-color);
+	background-color: var(--android-tertiary-color);
 	border-radius: 10px;
 }
 
 [data-theme="dark"] main aside {
-	background-color: var(--quaternary-color);
+	background-color: var(--android-quinary-color);
 }
 
 main aside > h3 {
 	margin: -10px -10px 0 -10px;
 	padding: 10px;
-	background-color: var(--quaternary-color);
+	background-color: var(--android-quinary-color);
 	color: white;
 	border-radius: 10px 10px 0 0;
 }
 
 [data-theme="dark"] main aside > h3 {
-	background-color: var(--secondary-color);
+	background-color: var(--android-tertiary-color);
 }
 
 main aside > ul {
@@ -225,7 +217,7 @@ footer {
 	padding: 5px;
 	font-size: 0.8em;
 	text-align: center;
-	background-color: var(--quinary-color);
+	background-color: var(--android-scenario-color);
 	color: white;
 }
 
@@ -237,5 +229,5 @@ footer a {
 
 footer a:hover {
 	text-decoration: underline;
-	color: var(--primary-color);
+	color: var(--android-secondary-color);
 }
